@@ -1,0 +1,33 @@
+{
+  "name": "2020-bem-development",
+  "version": "1.0.0",
+  "private": true,
+  "description": "",
+  "author": "oooshinnn",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npm run watch",
+    "watch": "run-p watch:*",
+    "watch:style": "chokidar 'src/sass/**/*' -c 'npm run build:style' --initial",
+    "watch:pug": "chokidar 'src/pug/**/*' -c 'npm run build:pug' --initial",
+    "build:style": "run-s build:sass build:postcss",
+    "build:sass": "node-sass --importer node_modules/node-sass-globbing/index.js 'src/sass/style.scss' 'build/style.css' --source-map-embed --output-style=expanded",
+    "build:postcss": "postcss 'build/style.css' -o 'build/style.min.css' --no-map -u autoprefixer css-mqpacker csswring",
+    "build:pug": "pug src/pug/*.pug --pretty --out build"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "ie 11"
+  ],
+  "devDependencies": {
+    "autoprefixer": "9.7.4",
+    "chokidar-cli": "2.1.0",
+    "css-mqpacker": "7.0.0",
+    "csswring": "7.0.0",
+    "node-sass": "4.13.1",
+    "node-sass-globbing": "0.0.23",
+    "npm-run-all": "4.1.5",
+    "postcss-cli": "7.1.0",
+    "pug-cli": "1.0.0-alpha6"
+  }
+}

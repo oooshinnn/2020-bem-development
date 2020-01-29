@@ -1,0 +1,15 @@
+$breakpoints: (
+  's': 'only screen and (min-width: 560px)',
+  'm': 'only screen and (min-width: 960px)',
+  'l': 'only screen and (min-width: 1280px)'
+) !default;
+
+@mixin mq($breakpoint: m) {
+  @media #{map-get($breakpoints, $breakpoint)} {
+    @content;
+  }
+}
+
+@include mq(s) {/* base-size */}
+@include mq(m) {/* Wider than s-size */}
+@include mq(l) {/* Wider than m-size */}

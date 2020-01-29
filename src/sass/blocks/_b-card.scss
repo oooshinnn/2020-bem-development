@@ -1,0 +1,33 @@
+.b-card {
+  @include mq(s) {
+    display: flex;
+  }
+
+  &__item {
+    background-color: #fff;
+    width: 150px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+    @include mq(s) {
+      margin-bottom: 0;
+      margin-right: 20px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+
+      @include mq(s) {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__title {
+    margin: 0 15px;
+  }
+
+  &__text {
+    margin: 0 15px;
+  }
+}

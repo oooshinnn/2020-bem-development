@@ -20,7 +20,7 @@
     "ie 11"
   ],
   "devDependencies": {
-    "autoprefixer": "9.7.4",
+    "autoprefixer": "9.7.6",
     "chokidar-cli": "2.1.0",
     "css-mqpacker": "7.0.0",
     "csswring": "7.0.0",

@@ -16,8 +16,7 @@
     "build:pug": "pug src/pug/*.pug --pretty --out build"
   },
   "browserslist": [
-    "last 2 versions",
-    "ie 11"
+    "ie >= 6"
   ],
   "devDependencies": {
     "autoprefixer": "9.7.6",
